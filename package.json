@@ -1,0 +1,24 @@
+{
+  "name": "css-frameworks",
+  "version": "1.0.0",
+  "description": "ok ok",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khintin/CSS-Frameworks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khintin/CSS-Frameworks/issues"
+  },
+  "homepage": "https://github.com/Khintin/CSS-Frameworks#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.55.0"
+  }
+}
