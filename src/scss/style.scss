@@ -1,0 +1,129 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "variables.scss";
+
+.logo {
+  width: 90px;
+}
+
+nav {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: end;
+}
+
+header {
+  background-color: $primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: $primary;
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+.container-one {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pro-img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.post-text {
+  height: 90px;
+  width: 360px;
+}
+
+.content {
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 360px;
+}
+.nav-link {
+  color: $white;
+}
+
+.nav-link:hover {
+  color: $secondary;
+}
+
+.nav-link:active {
+  color: $secondary;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+}
+
+.friends-container {
+  background-color: $gray-200;
+}
+
+.btn {
+  background-color: $white;
+  border-color: $secondary;
+  color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &.disabled {
+    background-color: $white;
+    border-color: lighten(#ccc, 5%);
+    color: lighten($gray-900, 5%);
+  }
+
+  &-warning {
+    color: $white;
+  }
+
+  &-primary:focus {
+    box-shadow: 0 0 5px lighten($primary, 10%);
+  }
+
+  &-secondary:focus {
+    box-shadow: 0 0 5px $gray-400;
+  }
+
+  &-success:focus {
+    box-shadow: 0 0 5px lighten($success, 10%);
+  }
+
+  &-info:focus {
+    box-shadow: 0 0 5px lighten($info, 10%);
+  }
+
+  &-warning:focus {
+    box-shadow: 0 0 5px lighten($warning, 10%);
+  }
+
+  &-danger:focus {
+    box-shadow: 0 0 5px lighten($danger, 10%);
+  }
+
+  &.disabled:focus {
+    box-shadow: none;
+  }
+}
+
+//LOG-IN PAGE//
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
