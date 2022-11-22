@@ -1,22 +1,8 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "variables.scss";
+@import "./variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 .logo {
   width: 90px;
-}
-
-nav {
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: end;
-}
-
-header {
-  background-color: $primary;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.3rem;
 }
 
 footer {
