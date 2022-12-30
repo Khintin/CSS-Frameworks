@@ -1,0 +1,1 @@
+console.log(fetch('http://api.noroff.dev/api/v1'))
