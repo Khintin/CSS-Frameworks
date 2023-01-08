@@ -42,15 +42,10 @@
                     >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="signup.html"
-                                    >Sign up</a
-                                >
+                                <a class="nav-link" href="signup.html">Sign up</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -60,12 +55,7 @@
                                 placeholder="Search"
                                 aria-label="Search"
                             />
-                            <button
-                                class="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
+                            <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
@@ -81,36 +71,33 @@
                     />
                 </div>
                 <div class="col-12 col-md-6">
-                    <form action="/profile.html">
+                    <form>
                         <!-- Email input -->
                         <div class="form-outline mb-4">
+                            <label class="form-label" for="inputEmail">Email address</label>
                             <input
                                 type="email"
-                                id="form1Example13"
+                                id="inputEmail"
                                 class="form-control form-control-lg"
                                 minlength="8"
                             />
-                            <label class="form-label" for="form1Example13"
-                                >Email address</label
-                            >
+
+                            <small id="emailError" class="text-danger"></small>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
+                            <label class="form-label" for="inputPassword">Password</label>
                             <input
                                 type="password"
-                                id="form1Example23"
+                                id="inputPassword"
                                 class="form-control form-control-lg"
                                 minlength="8"
                             />
-                            <label class="form-label" for="form1Example23"
-                                >Password</label
-                            >
+                            <small id="passwordError" class="text-danger"></small>
                         </div>
 
-                        <div
-                            class="d-flex justify-content-around align-items-center mb-4"
-                        >
+                        <div class="d-flex justify-content-around align-items-center mb-4">
                             <!-- Checkbox -->
                             <div class="form-check">
                                 <input
@@ -120,10 +107,7 @@
                                     id="form1Example3"
                                     checked
                                 />
-                                <label
-                                    class="form-check-label"
-                                    for="form1Example3"
-                                >
+                                <label class="form-check-label" for="form1Example3">
                                     Remember me
                                 </label>
                             </div>
@@ -132,7 +116,8 @@
 
                         <!-- Submit button -->
                         <button
-                            type="submit"
+                            type="button"
+                            id="btnLogin"
                             class="btn btn-primary btn-lg btn-bloc d-flex align-items-center"
                         >
                             LOG IN
@@ -144,6 +129,7 @@
         <footer>
             <span>Copyright 2022 Cristina Syversen Inc.</span>
         </footer>
+        <script type="module" src="js/login.mjs"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
