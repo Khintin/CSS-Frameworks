@@ -1,5 +1,6 @@
 import { deletePost, getPostById, updatePost } from "./api.mjs";
 import { getUser } from "./localstorage.mjs";
+import { getToken } from "./localstorage.mjs";
 
 const postId = new URLSearchParams(window.location.search).get("id");
 
@@ -121,6 +122,13 @@ async function submitEdit(e, editButton, submitButton) {
 
     titleError.innerText = "";
     bodyError.innerText = "";
+
+
+    const token = getToken();
+
+    if (!token) {
+        location.href = "login.html";
+    }
 
     let error = false;
 

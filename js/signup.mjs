@@ -1,4 +1,6 @@
 import { registerUser, loginUser } from "./api.mjs";
+import { setToken, setUser } from "./localstorage.mjs";
+
 
 const baseUrlRegister = "https://api.noroff.dev/api/v1";
 
@@ -16,6 +18,7 @@ btnRegister.addEventListener("click", () => {
 
     const emailPattern = /^[a-z0-9]+(?!.*(?:\+{2,}|\-{2,}|\.{2,}))(?:[\.+\-]{0,1}[a-z0-9])*@(?:stud\.noroff\.no|noroff\.no)$/;
     const emailValid = emailPattern.test(email);
+
 
     let error = false;
 
@@ -47,16 +50,14 @@ btnRegister.addEventListener("click", () => {
                 return;
             }
 
-            console.log("Ready to login");
-
             loginUser(email, password).then((res) => {
                 if (!res || res.errors) {
                     console.log("Unable to login");
                     return;
                 }
 
-                console.log("Successfully logged in as " + email);
-                console.log(res);
+                setToken(res.accessToken);
+                setUser(res.name, res.email);
 
                 location.href = "/profile.html";
             });
