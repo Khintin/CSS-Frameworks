@@ -86,6 +86,12 @@ export async function getPosts() {
         });
 }
 
+/**
+ * Gets a post from the API using the provided post ID
+ * @param {number} postId a number to indicate which post to get
+ * @returns {any} a JSON object of the post, or false if the API call failed.
+ */
+
 export async function getPostById(postId) {
     const token = getToken();
 
@@ -146,6 +152,11 @@ export async function createPost(title, body) {
         });
 }
 
+/**
+ * Deleting an existing post that match to the post ID
+ * @param {number} postId a number indicate which post to delete
+ * @returns {boolean} True if the API call succeeded, otherwise false.
+ */
 export async function deletePost(postId) {
     const token = getToken();
 
@@ -166,7 +177,7 @@ export async function deletePost(postId) {
         .then(response => response.json())
         .then(result => {
             console.log(result);
-            return result;
+            return true;
         })
         .catch(error => {
             console.log('error', error);
@@ -174,6 +185,13 @@ export async function deletePost(postId) {
         });
 }
 
+/**
+ * Updates an existing post with the provided title and body
+ * @param {number} postId A number indicating which post to update
+ * @param {string} title The new title of the post
+ * @param {string} body The new content of the post
+ * @returns {any} a JSON object of the updated post or the error if the API call failed
+ */
 export async function updatePost(postId, title, body) {
     const token = getToken();
 
@@ -199,6 +217,6 @@ export async function updatePost(postId, title, body) {
         })
         .catch(error => {
             console.log('error', error);
-            return false;
+            return error;
         });
 }
