@@ -80,10 +80,12 @@ searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    const searchQuery = [...formData.values()][0];
+    const [searchQuery] = [...formData.values()];
 
     if (searchQuery && searchQuery.length > 0) {
-        const filteredPosts = allPosts.filter(post => post.title.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1 || post.body.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1);
+        const filteredPosts = allPosts.filter(post => {
+            return post.title && post.title.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1 || post.body && post.body.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1
+        });
         feed.innerHTML = "";
         filteredPosts.forEach(post => {
             createFeedItem(post);

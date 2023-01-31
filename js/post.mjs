@@ -81,7 +81,7 @@ function displayAuthorControls() {
         e.preventDefault();
 
         deletePost(postId).then((res) => {
-            if (res == 204) {
+            if (res == true) {
                 // Post was deleted
                 postSection.innerHTML = `
                     <div class="alert alert-success"><h3>The post has been deleted</h3><p>The post was successfully deleted. Click <a href="index.html">here</a> to return to the homepage.</p></div>

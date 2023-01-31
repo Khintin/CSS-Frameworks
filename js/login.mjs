@@ -42,9 +42,10 @@ btnLogin.addEventListener("click", () => {
                 return;
             }
 
-            setToken(res.accessToken);
-            setUser(res.name, res.email);
+            const { accessToken, name, email, ...profile } = res;
 
+            setToken(accessToken);
+            setUser(name, email);
             location.href = "profile.html";
         });
     }
